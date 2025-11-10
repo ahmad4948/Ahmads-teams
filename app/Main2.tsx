@@ -41,12 +41,12 @@ return(
     <div>
      {filtered.map((match,i) => {
       return(
-        <div key={i} className="flex justify-around mt-32 bg-white items-center w-[95%] mx-auto 
-        rounded">
+        <div key={i} className="grid grid-cols-[auto_1fr_auto_1fr_auto] mt-32 bg-white items-center
+         w-[95%] mx-auto rounded gap-x-16 mb-12">
        <img src={match.team1 === "Ipswich Town FC"? 
        "https://upload.wikimedia.org/wikipedia/en/4/43/Ipswich_Town.svg"
       : `https://media.api-sports.io/football/teams/${teamIDs[match.team1]}.png` } 
-        className="h-38"/>
+        className="h-38 w-28"/>
 
            <span className=" text-4xl text-[#28282C] font-semibold">{match.team1} </span> 
            <span className=" text-3xl">{match.date} </span> 
@@ -54,7 +54,7 @@ return(
                <img src={match.team2 === "Ipswich Town FC"? 
        "https://upload.wikimedia.org/wikipedia/en/4/43/Ipswich_Town.svg"
       : `https://media.api-sports.io/football/teams/${teamIDs[match.team2]}.png` }
-          className="h-38" />
+          className="h-38 w-28" />
            </div>
       )
      }
