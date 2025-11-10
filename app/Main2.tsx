@@ -41,7 +41,8 @@ return(
     <div>
      {filtered.map((match,i) => {
       return(
-        <div key={i} className="flex justify-around mt-32 bg-white">
+        <div key={i} className="flex justify-around mt-32 bg-white items-center w-[95%] mx-auto 
+        rounded">
        <img src={match.team1 === "Ipswich Town FC"? 
        "https://upload.wikimedia.org/wikipedia/en/4/43/Ipswich_Town.svg"
       : `https://media.api-sports.io/football/teams/${teamIDs[match.team1]}.png` } 
