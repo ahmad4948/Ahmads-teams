@@ -41,20 +41,20 @@ return(
     <div>
      {filtered.map((match,i) => {
       return(
-        <div key={i} className="grid grid-cols-[auto_1fr_auto_1fr_auto] mt-32 bg-white items-center
-         w-[95%] mx-auto rounded gap-x-16 mb-12">
+        <div key={i} className="grid grid-cols-5 md:grid-cols-[auto_1fr_auto_1fr_auto] mt-32 bg-white items-center
+         w-[95%] mx-auto rounded  gap-x-7 md:gap-x-16 mb-12">
        <img src={match.team1 === "Ipswich Town FC"? 
        "https://upload.wikimedia.org/wikipedia/en/4/43/Ipswich_Town.svg"
       : `https://media.api-sports.io/football/teams/${teamIDs[match.team1]}.png` } 
-        className="h-38 w-28"/>
+        className="h-16 w-12 md:h-38 md:w-28"/>
 
-           <span className=" text-4xl text-[#28282C] font-semibold">{match.team1} </span> 
-           <span className=" text-3xl">{match.date} </span> 
-           <span className=" text-4xl text-[#28282C] font-semibold"> {match.team2} </span>
+           <span className="text-sm md:text-4xl text-[#28282C] font-semibold">{match.team1} </span> 
+           <span className="text-xs md:text-3xl">{match.date} </span> 
+           <span className="text-sm md:text-4xl text-[#28282C] font-semibold"> {match.team2} </span>
                <img src={match.team2 === "Ipswich Town FC"? 
        "https://upload.wikimedia.org/wikipedia/en/4/43/Ipswich_Town.svg"
       : `https://media.api-sports.io/football/teams/${teamIDs[match.team2]}.png` }
-          className="h-38 w-28" />
+          className="h-16 w-12 md:h-38 md:w-28" />
            </div>
       )
      }
